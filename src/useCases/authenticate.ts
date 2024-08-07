@@ -1,5 +1,3 @@
-/* eslint-disable no-useless-constructor */
-
 import { Org } from "@prisma/client";
 
 import { OrgRepository } from "@/http/repositories/org-repository";

@@ -1,5 +1,3 @@
-/* eslint-disable no-useless-constructor */
-
 import { hash } from "bcryptjs";
 
 import { Org } from "@prisma/client";

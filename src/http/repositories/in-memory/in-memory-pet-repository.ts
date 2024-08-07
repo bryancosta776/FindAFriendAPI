@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import { Pet, Prisma } from "@prisma/client";
 import { InMemoryOrgRepository } from "./in-memory-org-repository";
 

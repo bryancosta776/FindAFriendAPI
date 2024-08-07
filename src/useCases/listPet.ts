@@ -1,5 +1,3 @@
-/* eslint-disable no-useless-constructor */
-
 import { Pet } from "@prisma/client";
 
 import { PetRepository } from "@/http/repositories/pet-repository";
