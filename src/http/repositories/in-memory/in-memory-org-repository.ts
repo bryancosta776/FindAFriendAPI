@@ -1,8 +1,9 @@
 import { Org, Prisma } from "@prisma/client";
 import { findOrgForCityParams, OrgRepository } from "../org-repository";
 import { getDistanceBetweenCoordinates } from "utils/get-distance-between-coordinates";
+import { randomUUID } from "node:crypto";
 
-export class inMemoryOrgRepository implements OrgRepository {
+export class InMemoryOrgRepository implements OrgRepository {
   public items: Org[] = [];
 
   async findOrgforCity(params: findOrgForCityParams) {
@@ -43,8 +44,8 @@ export class inMemoryOrgRepository implements OrgRepository {
   }
 
   async create(data: Prisma.OrgCreateInput) {
-    const org: Org = {
-      id: "user-1",
+    const org = {
+      id: randomUUID(),
       name: data.name,
       email: data.email,
       password: data.password,

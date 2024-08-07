@@ -1,14 +1,14 @@
 /* eslint-disable no-useless-constructor */
 import { Pet, Prisma } from "@prisma/client";
-import { inMemoryOrgRepository } from "./in-memory-org-repository";
+import { InMemoryOrgRepository } from "./in-memory-org-repository";
 
 import { petAbout, PetRepository } from "../pet-repository";
 import { randomUUID } from "crypto";
 
-export class inMemoryPetRepository implements PetRepository {
+export class InMemoryPetRepository implements PetRepository {
   public items: Pet[] = [];
 
-  constructor(private orgsRepository: inMemoryOrgRepository) {}
+  constructor(private orgsRepository: InMemoryOrgRepository) {}
 
   async findAll(params: petAbout) {
     const orgIdReturn = this.orgsRepository.items.filter(

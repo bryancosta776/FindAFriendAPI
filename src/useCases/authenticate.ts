@@ -15,7 +15,7 @@ interface AuthenticateOrgUseCaseResponse {
   org: Org;
 }
 
-export class RegisterUseCase {
+export class AuthenticateUseCase {
   constructor(private orgRepository: OrgRepository) {}
 
   async execute({

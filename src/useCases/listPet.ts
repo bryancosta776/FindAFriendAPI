@@ -16,7 +16,7 @@ interface ListPetUseCaseResponse {
   pet: Pet[];
 }
 
-export class RegisterUseCase {
+export class ListPetUseCase {
   constructor(private petRepository: PetRepository) {}
 
   async execute({

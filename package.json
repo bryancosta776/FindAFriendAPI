@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
-    "build": "tsup src --out-dir build"
+    "build": "tsup src --out-dir build",
+    "test:watch": "vitest"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@fastify/jwt": "8.0.1",
     "@prisma/client": "5.17.0",
     "@types/bcryptjs": "2.4.6",
     "bcryptjs": "2.4.3",
